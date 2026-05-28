@@ -8,7 +8,7 @@ services:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-      - MONGO_URI=mongodb+srv://hoolharshal_db_user:YwK2z6dUVsN3eI2z@cluster0.4nfviog.mongodb.net/?appName=Cluster0
+      - MONGO_URI=mongodb+srv://hoolharshal_db_user:<password>@cluster0.4nfviog.mongodb.net/?appName=Cluster0
       - CORS_ORIGINS=http://localhost  # Overriding to port 80 for Docker
 # Docker to read the .env file from your backend folder
     env_file:
