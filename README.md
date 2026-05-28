@@ -6,7 +6,6 @@ Tech Stack
  Frontend integration
 * React.js — Single Page Application (SPA) architecture.
 * Tailwind CSS v3 — Utility-first, responsive interface styling framework.
-* Lucide React — Clean, modern iconography suite.
 * React Router DOM — Dynamic client-side routing and page security wrappers.
 
  Backend integration
