@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend-api:
+    build: ./backend
+    container_name: node_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - MONGO_URI=mongodb+srv://hoolharshal_db_user:YwK2z6dUVsN3eI2z@cluster0.4nfviog.mongodb.net/?appName=Cluster0
+      - CORS_ORIGINS=http://localhost  # Overriding to port 80 for Docker
+# Docker to read the .env file from your backend folder
+    env_file:
+      - ./backend/.env
+      
+  frontend-view:
+    build: ./frontend/app
+    container_name: react_frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend-api
